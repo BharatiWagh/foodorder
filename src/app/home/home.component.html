@@ -1,0 +1,16 @@
+<!-- <p>home works!</p> -->
+<ul>
+    <li *ngFor="let food of foods">
+        <a>
+            <img src="{{food.imageUrl}}" alt="food images">
+        </a>
+        <div class="content">
+            <div class="name">
+                {{food.name}}
+            </div>
+             <span class="favorite{{food.favorite? '':'not'}}">dil icon</span>
+        </div>
+        <app-starrating value="5" totalstars="5" checkedcolor="red" unchekedcolor="black" size="24px" [readonly]="false"></app-starrating>
+        
+    </li>
+</ul>
